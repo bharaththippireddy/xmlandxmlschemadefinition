@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.bharathairlines.com/Reservation"
+	xmlns:tns="http://www.bharathairlines.com/Reservation">
+	<simpleType name="stringmax20">
+		<restriction base="string">
+			<maxLength value="20" />
+		</restriction>
+	</simpleType>
+</schema>
+
+
+
+
+
+
+
+
+

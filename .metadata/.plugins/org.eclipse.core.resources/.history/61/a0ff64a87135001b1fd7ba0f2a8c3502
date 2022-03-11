@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.bharathairlines.com/Reservation"
+	xmlns:tns="http://www.bharathairlines.com/Reservation">
+
+	<element name="reservation">
+		<complexType>
+			<sequence>
+				<element name="flight" type="tns:flight" />
+				<element name="passenger" type="tns:passenger" />
+			</sequence>
+		</complexType>
+	</element>
+
+	<complexType name="passenger">
+		<sequence>
+			<element name="lastName" type="string" />
+			<element name="firstName" type="string" />
+			<element name="middleName" type="string" />
+			<element name="email" type="string" />
+			<element name="phone" type="string" />
+		</sequence>
+	</complexType>
+
+	<complexType name="flight">
+		<sequence>
+			<element name="flightNumber" type="string" />
+			<element name="operatingAirlines" type="string" />
+			<element name="arrivalCity" type="string" />
+			<element name="dateOfDeparture" type="date" />
+			<element name="estimatedTimeOfDeparture" type="time" />
+		</sequence>
+	</complexType>
+	
+	<simpleType name="stringmax20">
+		<restriction base="string">
+			<maxLength value="20"></maxLength>
+		</restriction>
+	</simpleType>
+	
+</schema>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.bharaththippireddy.org/passenger"
+	xmlns:tns="http://www.bharaththippireddy.org/passenger"
+	elementFormDefault="qualified">
+	<element name="passenger" type="tns:passenger" />
+	<complexType name="passenger">
+		<sequence>
+			<element name="name" type="string" />
+			<element name="dob" type="date" />
+			<element name="seatno" type="int" />
+			<element name="gender" type="string" />
+		</sequence>
+	</complexType>
+
+</schema>

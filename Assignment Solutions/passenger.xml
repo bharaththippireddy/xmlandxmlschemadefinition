@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:passenger
+	xmlns:tns="http://www.bharaththippireddy.org/passenger"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.bharaththippireddy.org/passenger passenger.xsd ">
+	<tns:name>Bob</tns:name>
+	<tns:dob>1985-01-01</tns:dob>
+	<tns:seatno>12</tns:seatno>
+	<tns:gender>M</tns:gender>
+</tns:passenger>

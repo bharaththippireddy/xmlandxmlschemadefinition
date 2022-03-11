@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.bharathairlines.com/Reservation"
+	xmlns:tns="http://www.bharathairlines.com/Reservation">
+<include schemaLocation="flight.xsd"></include>
+<include schemaLocation="common.xsd"></include>
+
+	<element name="reservation">
+		<complexType>
+			<sequence>
+				<element name="flight" type="tns:flight" />
+				<element name="passenger" type="tns:passenger" />
+			</sequence>
+		</complexType>
+	</element>
+
+	<complexType name="passenger">
+		<sequence>
+			<element name="lastName" type="tns:stringmax20" />
+			<element name="firstName" type="tns:stringmax20" />
+			<element name="middleName" type="tns:stringmax20" />
+			<element name="email" type="tns:stringmax20" />
+			<element name="phone" type="tns:phone" />
+		</sequence>
+	</complexType>
+
+	<simpleType name="phone">
+		<restriction base="string">
+			<pattern value="[0-9]{10}"></pattern>
+		</restriction>
+	</simpleType>
+
+
+</schema>
+
+
+
+
+
+
+
+
+

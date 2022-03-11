@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.bharaththippireddy.org/order"
+	xmlns:tns="http://www.bharaththippireddy.org/order"
+	elementFormDefault="qualified">
+	<element name="order" type="tns:order" />
+	<complexType name="order">
+		<sequence>
+			<element name="customer" type="tns:customer" />
+			<element name="product" type="tns:product" minOccurs="1"
+				maxOccurs="unbounded" />
+		</sequence>
+		<attribute name="id" type="tns:ID" />
+	</complexType>
+
+	<complexType name="customer">
+		<sequence>
+			<element name="name" type="string" />
+			<element name="phone" type="string" minOccurs="0" />
+		</sequence>
+		<attribute name="id" type="tns:ID" />
+	</complexType>
+	<complexType name="product">
+		<sequence>
+			<element name="name" type="tns:string20chars" />
+			<element name="description" type="int" />
+			<element name="price" type="tns:string100chars" />
+			<element name="category" type="tns:category" />
+		</sequence>
+		<attribute name="id" type="tns:ID" />
+	</complexType>
+	<simpleType name="string20chars">
+		<restriction base="string">
+			<maxLength value="20" />
+		</restriction>
+	</simpleType>
+	<simpleType name="string100chars">
+		<restriction base="string">
+			<maxLength value="100" />
+		</restriction>
+	</simpleType>
+
+	<simpleType name="category">
+		<restriction base="string">
+			<enumeration value="electronics" />
+			<enumeration value="books" />
+			<enumeration value="shoes" />
+		</restriction>
+	</simpleType>
+
+
+
+	<simpleType name="ID">
+		<restriction base="int">
+			<maxInclusive value="50" />
+		</restriction>
+	</simpleType>
+
+</schema>

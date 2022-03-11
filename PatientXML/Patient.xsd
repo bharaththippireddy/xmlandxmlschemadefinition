@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://bharaththippireddy.com/Patient"
+	xmlns:tns="http://bharaththippireddy.com/Patient"
+	attributeFormDefault="unqualified">
+
+	<element name="patient" type="tns:Patient" />
+
+	<complexType name="Patient">
+		<sequence>
+			<element name="name" type="tns:String15Chars" />
+			<element name="age" type="int" />
+			<element name="dob" type="date" />
+			<element name="email" type="string" maxOccurs="unbounded" />
+			<element name="gender" type="tns:Gender" />
+			<element name="phone" type="string"/>
+			<element name="payment" type="tns:PaymentType" />
+		</sequence>
+		<attribute name="id" type="tns:ID" />
+	</complexType>
+
+
+	<complexType name="PaymentType">
+		<choice>
+			<element name="insurance" type="tns:Insurance" />
+			<element name="cash" type="int" />
+		</choice>
+	</complexType>
+	<complexType name="Insurance">
+		<all>
+			<element name="providerName" type="string" />
+			<element name="limit" type="int" />
+		</all>
+	</complexType>
+	<simpleType name="Gender">
+		<restriction base="string">
+			<enumeration value="M" />
+			<enumeration value="F" />
+		</restriction>
+	</simpleType>
+	<simpleType name="String15Chars">
+		<restriction base="string">
+			<maxLength value="15" />
+		</restriction>
+	</simpleType>
+	<simpleType name="ID">
+		<restriction base="int">
+			<pattern value="[0-9]*" />
+		</restriction>
+	</simpleType>
+
+</schema>

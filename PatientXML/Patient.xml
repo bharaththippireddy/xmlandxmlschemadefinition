@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:patient
+	xmlns:tns="http://bharaththippireddy.com/Patient"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://bharaththippireddy.com/Patient Patient.xsd " id="123">
+	<name>John</name>
+	<age>40</age>
+	<dob>1981-01-01</dob>
+	<email>john@john.com</email>
+	<gender>M</gender>
+	<phone>1234567890</phone>
+	<payment>
+		<insurance>
+			<providerName>Blue Cross</providerName>
+			<limit>1000</limit>
+		</insurance>
+	</payment>
+</tns:patient>

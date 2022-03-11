@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<userprofile>
+	<firstname>John</firstname>
+	<lastname>Bailey</lastname>
+	<password>strongpassword</password>
+	<email>j.b@jb.com</email>
+	<picture location="/safelocation">Profile Pic</picture>
+</userprofile>
